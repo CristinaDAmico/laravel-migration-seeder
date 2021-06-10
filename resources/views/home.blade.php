@@ -13,6 +13,16 @@
     <body>
         <div class="container p-5">
             <h1 class="text-center">AGENZIA VIAGGI</h1>
+
+            @foreach ($packages as $package)
+                <article class="m-5">
+                    <div>Città: {{ $package->città }}</div>
+                    <div>Trasporto: {{ $package->trasporto }}</div>
+                    <div>Pernottamento: {{ $package->pernottamento }}</div>
+                    <div>Ospiti: {{ $package->n_persone }}</div>
+                    <div>{{ $package->prezzo }} €</div>
+                </article>
+            @endforeach
         </div>
     </body>
 </html>
